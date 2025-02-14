@@ -1,0 +1,94 @@
+import React from "react";
+import bgImage from "@/images/footer-bg.jpg";
+import bgImage2 from "@/images/footer-bg2.png";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import logo from "@/images/logo.png";
+import Image from "next/image";
+
+const Footer = () => {
+  return (
+    <footer>
+      <div
+        className="relative w-full h-[500px] flex items-center justify-center bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bgImage.src})`,
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center text-white w-full px-6 max-w-3xl">
+          <h2 className="text-4xl font-bold uppercase text-green-500">
+            Subscribe
+          </h2>
+          <p className="text-2xl font-semibold mt-1">TO OUR NEWSLETTER</p>
+
+          {/* Input Field & Button */}
+          <div className="mt-6 flex justify-center">
+            <input
+              type="email"
+              placeholder="Your email ..."
+              className="p-3 text-black w-full max-w-md border-none outline-none"
+            />
+            <button className="bg-green-600 text-white px-6 py-3 font-bold text-sm uppercase hover:bg-green-700 transition">
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="relative bg-black text-white py-10 text-center opacity-95">
+        {/* Background Pattern */}
+        <div
+          className="absolute inset-0 opacity-100"
+          style={{
+            backgroundImage: `url(${bgImage2.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "top",
+          }}
+        ></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center px-6">
+          {/* Logo */}
+          <Image
+            src={logo}
+            alt="Club Logo"
+            width={150}
+            height={150}
+            className="mb-10"
+          />
+
+          {/* Description */}
+          <p className="mt-3 max-w-4xl text-sm mb-10">
+            The connection between fans and clubs in the Championship is deeply
+            rooted, creating a unique atmosphere that resonates with the essence
+            of the beautiful game.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-10 mt-5">
+            <a href="#" className="text-green-500 text-xl hover:text-green-600">
+              <FaFacebook />
+            </a>
+            <a href="#" className="text-green-500 text-xl hover:text-green-600">
+              <FaInstagram />
+            </a>
+            <a href="#" className="text-green-500 text-xl hover:text-green-600">
+              <FaTwitter />
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-10 text-sm">
+            <span className="text-gray-400">
+              Like-themes © All Rights Reserved - 2024
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
