@@ -55,7 +55,7 @@ const PlayersSlider = () => {
       <div className="flex items-center gap-4 mt-10" style={{width: "100%", maxWidth: "600px", marginInline: "auto"}}>
         <button
           onClick={handlePrev}
-          className="z-10 text-black  bg-white p-3 cursor-pointer transition-opacity duration-300 hover:opacity-80"
+          className="z-10 text-black  bg-white p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
           <HiOutlineArrowNarrowLeft size={32} />
         </button>
@@ -79,7 +79,7 @@ const PlayersSlider = () => {
         </Swiper>
         <button
           onClick={handleNext}
-          className="z-10 text-black  bg-white p-3 cursor-pointer transition-opacity duration-300 hover:opacity-80"
+          className="z-10 text-black  bg-white p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
           <HiOutlineArrowNarrowRight size={32} />
         </button>

@@ -1,7 +1,7 @@
 import atleticos from "@/images/atleticos.png";
 import ailton from "@/images/ailton.png";
 import slide1 from "@/images/slide1.jpg";
-import barcode from "@/images/atleticos.png"; 
+import barcode from "@/images/atleticos.png";
 import salford from "@/images/atleticos.png";
 import news1 from "@/images/news1.JPG";
 import news2 from "@/images/news2.jpeg";
@@ -187,5 +187,28 @@ export const tickets = [
     players: "ATLETICOS — SALFORD RANGERS",
     teamOne: atleticos,
     teamTwo: salford,
+  },
+];
+
+export const videoGallery = [
+  {
+    id: 1,
+    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Youtube Video",
+  },
+  {
+    id: 2,
+    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Youtube Video",
+  },
+  {
+    id: 3,
+    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Youtube Video",
+  },
+  {
+    id: 4,
+    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Youtube Video",
   },
 ];

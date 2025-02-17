@@ -109,13 +109,13 @@ const MatchSlider = () => {
       <div className="flex items-center justify-center gap-8 mt-10">
         <button
           onClick={handlePrev}
-          className="text-white bg-black p-3 cursor-pointer hover:bg-gray-400"
+          className="text-white bg-black p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
           <HiOutlineArrowNarrowLeft size={24} />
         </button>
         <button
           onClick={handleNext}
-          className="text-white bg-black p-3 cursor-pointer hover:bg-gray-400"
+          className="text-white bg-black p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
           <HiOutlineArrowNarrowRight size={24} />
         </button>

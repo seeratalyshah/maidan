@@ -18,22 +18,25 @@ const slides = [
     id: 1,
     image: slide1,
     title:
-      "WHY <span class='text-green-500 italic'>ANDREW HARRIS</span> WAS MAN OF THE MATCH ON SATURDAY",
-    buttonText: "Read More",
+      "Maidaan in the Spotlight – <span class='text-green-500 italic'>Global & National </span>Recognition",
+    desc: "Discover how Maidaan’s football initiative is transforming lives and gaining global recognition",
+    buttonText: "Read Featured News",
   },
   {
     id: 2,
     image: slide2,
     title:
-      "A STAR PERFORMANCE <span class='text-green-500 italic'>BY JAMES DOE</span> LEADS TO A WIN",
-    buttonText: "Read More",
+      "Maidaan in the Spotlight – <span class='text-green-500 italic'>Global & National </span>Recognition",
+    desc: "Discover how Maidaan’s football initiative is transforming lives and gaining global recognition",
+    buttonText: "Read Featured News",
   },
   {
     id: 3,
     image: slide3,
     title:
-      "HOW <span class='text-green-500 italic'>EMILY SMITH</span> DOMINATED THE FIELD",
-    buttonText: "Read More",
+      "Maidaan in the Spotlight – <span class='text-green-500 italic'>Global & National </span>Recognition",
+    desc: "Discover how Maidaan’s football initiative is transforming lives and gaining global recognition",
+    buttonText: "Read Featured News",
   },
 ];
 
@@ -59,7 +62,7 @@ export default function HeroSlider() {
                 objectFit="cover"
                 quality={90}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               <div className="absolute bottom-[100px] left-0 right-0">
                 <div className="flex justify-between items-end w-full p-6 md:p-20">
                   <div className="flex flex-col items-start justify-center text-white gap-6">
@@ -67,6 +70,9 @@ export default function HeroSlider() {
                       className="text-4xl md:text-6xl font-bold leading-tight w-full max-w-[900px]"
                       dangerouslySetInnerHTML={{ __html: slide.title }}
                     ></h1>
+                    <p className="text-lg md:text-xl font-bold leading-tight w-full max-w-[900px]">
+                      {slide.desc}
+                    </p>
                     <button className="mt-4 px-10 py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-medium flex items-center gap-4">
                       <span>{slide.buttonText}</span>
                       <FaArrowRight />

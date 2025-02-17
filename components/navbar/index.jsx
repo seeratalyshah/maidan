@@ -29,7 +29,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Products", path: "/products" },
+    { name: "Media Coverage", path: "/media-coverage" },
     { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
   ];

@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { FaRegEye, FaRegComment } from "react-icons/fa";
-import slide1 from "@/images/slide1.jpg"; 
-
+import geoLogo from "@/images/geo-logo.png";
 
 const NewssCard = ({ item }) => {
   return (
-    <div className="flex bg-white overflow-hidden p-4 items-center gap-4">
+    <div className="relative flex bg-white overflow-hidden p-4 items-center gap-4">
+      <div className="absolute top-2 right-2 bg-white border text-sm font-bold px-1 py-1 rounded-lg">
+        <Image src={geoLogo} alt="geo-logo" className="w-4 h-4 rounded-lg" />
+      </div>
       {/* Image Section */}
       <div className="w-32 h-24 flex-shrink-0">
         <Image
@@ -21,13 +23,18 @@ const NewssCard = ({ item }) => {
         <h3 className="font-bold text-sm text-gray-900 mt-1">{item.title}</h3>
 
         {/* Footer with icons */}
-        <div className="flex items-center gap-4 mt-2 text-gray-500 text-xs">
-          <div className="flex items-center gap-1">
-            <FaRegEye className="text-green-600" /> {item.views}
+        <div className="flex justify-between items-center gap-2 mt-4">
+          <div className="flex items-center gap-4  text-gray-500 text-xs">
+            <div className="flex items-center gap-1">
+              <FaRegEye className="text-green-600" /> {item.views}
+            </div>
+            <div className="flex items-center gap-1">
+              <FaRegComment className="text-green-600" /> {item.comments}
+            </div>
           </div>
-          <div className="flex items-center gap-1">
-            <FaRegComment className="text-green-600" /> {item.comments}
-          </div>
+          <span className="text-xs text-green-600 hover:text-green-700 cursor-pointer">
+            Read More
+          </span>
         </div>
       </div>
     </div>
