@@ -76,7 +76,7 @@ const mediaCoverage = [
 ];
 
 const NationalMedia = () => {
-  const [selectedOutlet, setSelectedOutlet] = useState("FIFA");
+  const [selectedOutlet, setSelectedOutlet] = useState("Geo News");
 
   const filteredMedia = mediaCoverage.filter(
     (item) => item.outlet === selectedOutlet
@@ -107,7 +107,7 @@ const NationalMedia = () => {
 
       {/* Media Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        {filteredMedia.length > 1 ? (
+        {filteredMedia.length > 0 ? (
           filteredMedia.map((item) => (
             <div key={item.id} className="bg-white shadow-lg p-4">
               <div className="flex items-center space-x-4">
