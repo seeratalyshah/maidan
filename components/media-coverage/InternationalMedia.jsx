@@ -3,8 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import mediaLogo1 from "@/images/fifa-logo.png";
-import mediaLogo2 from "@/images/geo-logo.png";
+import fifaLogo from "@/images/fifa-logo.png";
+import un from "@/images/un.jpg";
+import arabNews from "@/images/arab-news.jpg";
+import Jazeera from "@/images/jazeera.webp";
+import euroLogo from "@/images/euro-logo.png";
+import nrk from "@/images/nrk.png";
 
 const mediaCategories = [
   "FIFA",
@@ -12,37 +16,74 @@ const mediaCategories = [
   "Al Jazeera",
   "Euronews",
   "Norway Cup Media",
+  "NRK",
+  "ARAB NEWS",
 ];
 
 const mediaCoverage = [
   {
     id: 1,
     outlet: "FIFA",
-    logo: mediaLogo1,
+    logo: fifaLogo,
     title: "FIFA Highlights Pakistan’s Football Talent",
     summary:
-      "FIFA recognizes the efforts of Pakistan’s street football team...",
+      "Recognized Pakistan’s Street Child Football Team among the best in the Street Child World Cup.",
     link: "https://www.fifa.com/news",
-    video: "https://www.youtube.com/embed/sample-video1",
+    video: "",
   },
   {
     id: 2,
-    outlet: "FIFA",
-    logo: mediaLogo1,
-    title: "FIFA Highlights Pakistan’s Football Talent",
+    outlet: "Euronews",
+    logo: euroLogo,
+    title:
+      "Meet the football team from Pakistan who won the hearts of crowds in Qatar",
     summary:
-      "FIFA recognizes the efforts of Pakistan’s street football team...",
-    link: "https://www.fifa.com/news",
-    video: "https://www.youtube.com/embed/sample-video1",
+      "In Pakistan, more than 22 million children are out of school, and more than 7.5 million children are on the streets.",
+    link: "https://www.euronews.com/culture/2023/04/10/meet-the-football-team-from-pakistan-who-won-the-hearts-of-crowds-in-qatar",
+    video: "",
   },
   {
     id: 3,
     outlet: "Al Jazeera",
-    logo: mediaLogo2,
-    title: "Al Jazeera Reports on Pakistan’s Sports Impact",
-    summary: "Pakistan’s journey in sports is gaining global attention...",
-    link: "https://www.aljazeera.com/news",
+    logo: Jazeera,
+    title: "Street Child World Cup: Pakistan's team share their experiences",
+    summary:
+      "Hundreds of millions of children all over the world live and work on the streets, facing numerous challenges. Those experiences have been shared by the young footballers from Pakistan who are among the teams taking part in the Street Child World Cup in Doha.",
+    link: "https://www.aljazeera.com/news/",
+    video: "https://www.youtube.com/embed/DKEaGvoFGLE",
+  },
+  {
+    id: 4,
+    outlet: "UN",
+    logo: un,
+    title:
+      "Pakistan’s Street Child Football Team and UN Pakistan - Friendly Match",
+    summary:
+      "Pakistan’s Street Child Football⚽️ Team took on UN Pakistan in a friendly match on Sunday at the Sports Complex.",
+    link: "https://pakistan.un.org/en/239929-pakistan%E2%80%99s-street-child-football-team-and-un-pakistan-friendly-match",
     video: "",
+  },
+  {
+    id: 5,
+    outlet: "NRK",
+    logo: nrk,
+    title:
+      'From the Streets to the Norway Cup: "They Came with Worn-Out Football Shoes Taped Together"',
+    summary:
+      "The Pakistani street football team has sparked enormous enthusiasm. Now, the 17-year-olds are ready for the Norway Cup final.",
+    link: "https://www.nrk.no/norge/muslim-hands-pakistan-_-et-lag-med-gategutter-pa-norway-cup-1.16504248",
+    video: "",
+  },
+  {
+    id: 5,
+    outlet: "ARAB NEWS",
+    logo: arabNews,
+    title:
+      "Pakistan PM promises to promote football after street team’s stellar Norway performance",
+    summary:
+      "Pakistan’s street child football team is primarily composed of underprivileged children with limited resources",
+    link: "https://www.arabnews.com/node/2570967/pakistan",
+    video: "https://www.youtube.com/embed/XQUEq6sKluc",
   },
 ];
 
@@ -72,11 +113,7 @@ const InternationalMedia = () => {
           onChange={(e) => setSelectedOutlet(e.target.value)}
         >
           {mediaCategories.map((category) => (
-            <option
-              key={category}
-              value={category}
-              className="custom-dropdown"
-            >
+            <option key={category} value={category} className="custom-dropdown">
               {category}
             </option>
           ))}

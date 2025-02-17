@@ -108,14 +108,14 @@ const VideoSocialMediaCoverage = () => {
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 w-full">
               <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade, A11y]}
                 spaceBetween={15}
                 breakpoints={{
-                  480: { slidesPerView: 1 }, // Small screens: 1 slide
-                  640: { slidesPerView: 2 }, // Medium screens: 2 slides
-                  1024: { slidesPerView: 3 }, // Large screens: 3 slides
+                  480: { slidesPerView: 1 }, 
+                  640: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 }, 
                 }}
                 onSwiper={setSwiperInstance}
                 className="w-full"

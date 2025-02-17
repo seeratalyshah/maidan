@@ -193,22 +193,12 @@ export const tickets = [
 export const videoGallery = [
   {
     id: 1,
-    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    link: "https://www.youtube.com/embed/DKEaGvoFGLE",
     title: "Youtube Video",
   },
   {
     id: 2,
-    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    title: "Youtube Video",
-  },
-  {
-    id: 3,
-    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    title: "Youtube Video",
-  },
-  {
-    id: 4,
-    link: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    link: "https://www.youtube.com/embed/XQUEq6sKluc",
     title: "Youtube Video",
   },
 ];

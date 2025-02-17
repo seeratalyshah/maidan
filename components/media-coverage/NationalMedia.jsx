@@ -2,63 +2,75 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import mediaLogo1 from "@/images/fifa-logo.png";
-import mediaLogo2 from "@/images/geo-logo.png";
+import geoLogo from "@/images/geo-logo.png";
+import nationLogo from "@/images/nation-logo.png";
+import theNewsLogo from "@/images/the-news-logo.png";
+import isbLogo from "@/images/islamabad.webp";
+import inpLogo from "@/images/inp-logo.png";
 
 const mediaCategories = [
+  "Geo News",
+  "The Nation",
+  "The News",
+  "Islamabad Scene",
+  "INP",
   "FIFA",
   "UN",
   "Al Jazeera",
-  "Euronews",
-  "Norway Cup Media",
-  "Geo",
 ];
 
 const mediaCoverage = [
   {
     id: 1,
-    outlet: "FIFA",
-    logo: mediaLogo1,
-    title: "Team’s progress in Norway Cup & Street Child World Cup",
+    outlet: "Geo News",
+    logo: geoLogo,
+    title:
+      "Pakistan street child football team secures spot in Norway Cup 2024 playoffs",
     summary:
-      "FIFA recognizes the efforts of Pakistan’s street football team...",
-    link: "https://www.fifa.com/news",
+      "Players of Pakistan's U17 street child football team, playing under the name of Muslim Hands FC, in Norway Cup 2024 in this group photo. — Reporter",
+    link: "https://www.geo.tv/latest/556740-pakistan-street-child-football-team-secures-spot-in-norway-cup-2024-playoffs",
     video: "",
   },
   {
     id: 2,
-    outlet: "UN",
-    logo: mediaLogo2,
-    title: "Recognition by Pakistani Government Officials",
-    summary: "Pakistan’s journey in sports is gaining global attention...",
-    link: "https://www.aljazeera.com/news",
+    outlet: "The Nation",
+    logo: nationLogo,
+    title:
+      "Pakistan Street Child Football Team reaches Oslo for Norway Cup 2024",
+    summary:
+      "LAHORE    -   The Pakistan Street Child Football Team reached Oslo, Norway, to participate in the Norway Cup 2024 on Saturday.",
+    link: "https://www.nation.com.pk/28-Jul-2024/pakistan-street-child-football-team-reaches-oslo-for-norway-cup-2024",
     video: "",
   },
   {
     id: 3,
-    outlet: "UN",
-    logo: mediaLogo2,
-    title: "Press Releases on Training Camps & Team Selection",
-    summary: "Pakistan’s journey in sports is gaining global attention...",
-    link: "https://www.aljazeera.com/news",
+    outlet: "The News",
+    logo: theNewsLogo,
+    title: "Win for Pakistan street child team",
+    summary:
+      "ISLAMABAD: Pakistan’s street child football team Sunday got off to a winning start in the Norway Cup beating Norway’s Astoor Club 6-1 in Oslo (Norway).",
+    link: "https://www.thenews.com.pk/print/1214377-win-for-pakistan-street-child-team",
     video: "",
   },
   {
     id: 4,
-    outlet: "FIFA",
-    logo: mediaLogo1,
-    title: "Recognition by Pakistani Government Officials",
-    summary: "Pakistan’s journey in sports is gaining global attention...",
-    link: "https://www.aljazeera.com/news",
+    outlet: "Islamabad Scene",
+    logo: isbLogo,
+    title: "Pakistan finishes Street Child Football World Cup runner up",
+    summary:
+      "Pakistan, after putting up a valiant show throughout the tournament, finished as runner-up in the Street Child Football World Cup 2022, after losing to Egypt in the final.",
+    link: "https://www.islamabadscene.com/pakistan-finishes-street-child-football-world-cup-runner-up/",
     video: "",
   },
   {
     id: 5,
-    outlet: "FIFA",
-    logo: mediaLogo1,
-    title: "Press Releases on Training Camps & Team Selection",
-    summary: "Pakistan’s journey in sports is gaining global attention...",
-    link: "https://www.aljazeera.com/news",
+    outlet: "INP",
+    logo: inpLogo,
+    title:
+      "Pakistan Street child football team reveals kit for Norway Cup 2024",
+    summary:
+      "The Pakistan Street Child Football Federation has unveiled its new kit for the Norway Cup 2024 as the national team departs for the tournament.",
+    link: "https://www.inp.net.pk/news-detail/sports/pakistan-street-child-football-team-reveals-kit-for-norway-cup-2024",
     video: "",
   },
 ];
@@ -95,44 +107,50 @@ const NationalMedia = () => {
 
       {/* Media Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        {filteredMedia.map((item) => (
-          <div key={item.id} className="bg-white shadow-lg p-4">
-            <div className="flex items-center space-x-4">
-              <Image
-                src={item.logo}
-                alt="Outlet Logo"
-                width={50}
-                height={50}
-                className="rounded-md"
-              />
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-            </div>
-            <p className="text-gray-600 mt-2">{item.summary}</p>
-            <div className="mt-4 flex justify-between items-center">
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-600 flex items-center"
-              >
-                Read More
-                <FaExternalLinkAlt className="ml-2" />
-              </a>
-            </div>
-            {item.video && (
-              <div className="mt-4">
-                <iframe
-                  width="100%"
-                  height="200"
-                  src={item.video}
-                  title="Media Coverage"
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
+        {filteredMedia.length > 1 ? (
+          filteredMedia.map((item) => (
+            <div key={item.id} className="bg-white shadow-lg p-4">
+              <div className="flex items-center space-x-4">
+                <Image
+                  src={item.logo}
+                  alt="Outlet Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-md"
+                />
+                <h2 className="text-xl font-semibold">{item.title}</h2>
               </div>
-            )}
-          </div>
-        ))}
+              <p className="text-gray-600 mt-2">{item.summary}</p>
+              <div className="mt-4 flex justify-between items-center">
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 flex items-center"
+                >
+                  Read More
+                  <FaExternalLinkAlt className="ml-2" />
+                </a>
+              </div>
+              {item.video && (
+                <div className="mt-4">
+                  <iframe
+                    width="100%"
+                    height="200"
+                    src={item.video}
+                    title="Media Coverage"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )}
+            </div>
+          ))
+        ) : (
+          <p className="text-gray-500 mt-6">
+            No news available for the selected outlet.
+          </p>
+        )}
       </div>
     </div>
   );

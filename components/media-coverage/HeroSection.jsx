@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div className="flex justify-between items-end w-full p-6 md:p-20">
           <div className="flex flex-col items-start justify-center text-white gap-6 max-w-[900px]">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Maidaan in the Spotlight – Global & National Recognition
+              Maidaan in the Spotlight – <span className="text-green-600">Global & National</span> Recognition
             </h1>
             <p className="text-lg md:text-xl font-bold leading-tight">
               Discover how Maidaan’s football initiative is transforming lives

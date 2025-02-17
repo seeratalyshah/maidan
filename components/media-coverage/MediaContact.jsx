@@ -22,8 +22,8 @@ const MediaContact = () => {
   };
 
   return (
-    <section className="bg-gray-50 px-4 2xl:px-16">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <section className="px-4 2xl:px-16 py-[100px]">
+      <div className="max-w-4xl mx-auto bg-white p-8 border-t border-slate-100 shadow-lg">
         <h2 className="text-3xl font-bold text-center text-green-600">
           Press & Media Inquiries
         </h2>
