@@ -47,14 +47,14 @@ const PlayersSlider = () => {
   };
 
   return (
-    <div className="bg-[#F5F5F5] px-4 2xl:px-16 py-[60px] md:py-[100px]">
+    <div className="bg-[#F5F5F5] px-4 2xl:px-16">
       <div
         className="flex items-center gap-4 mt-10"
         style={{ width: "100%", maxWidth: "600px", marginInline: "auto" }}
       >
         <button
           onClick={handlePrev}
-          className="z-10 text-black bg-white p-1 md:p-3 cursor-pointer transition-opacity duration-300 hover-bg"
+          className="z-10 text-black bg-white p-2 md:p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
           <HiOutlineArrowNarrowLeft size={24} />
         </button>
@@ -74,7 +74,7 @@ const PlayersSlider = () => {
         </Swiper>
         <button
           onClick={handleNext}
-          className="z-10 text-black bg-white p-1 md:p-3 cursor-pointer transition-opacity duration-300 hover-bg"
+          className="z-10 text-black bg-white p-2 md:p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
           <HiOutlineArrowNarrowRight size={24} />
         </button>

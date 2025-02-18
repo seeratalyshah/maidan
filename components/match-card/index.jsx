@@ -7,15 +7,15 @@ const MatchCard = ({item}) => {
       <div className="bg-green-600 text-white px-6 py-2 text-sm">
         UPCOMING MATCH
       </div>
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex items-center justify-center gap-2 md:gap-8">
         <div className="flex items-center gap-4">
-          <Image src={item.team_one_icon} alt="Atleticos FC" className="w-10 h-10" />
+          <Image src={item.team_one_icon} alt="Atleticos FC" className="w-6 h-6 md:w-10 md:h-10" />
           <p className="text-sm font-bold mt-2">{item.team_one}</p>
         </div>
-        <p className="text-lg font-bold">— : —</p>
+        <p className="text-sm md:text-lg font-bold">— : —</p>
         <div className="flex items-center gap-4">
           <p className="text-sm font-bold mt-2">{item.team_two}</p>
-          <Image src={item.team_two_icon} alt="Ailton FC" className="w-10 h-10" />
+          <Image src={item.team_two_icon} alt="Ailton FC" className="w-6 h-6 md:w-10 md:h-10" />
         </div>
       </div>
       <div className="">

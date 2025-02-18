@@ -57,12 +57,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 2xl:px-16 py-[80px] md:py-[120px] lg:py-[200px] bg-[#F5F5F5]">
-        <VideoCard item={mainVideo} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {videoNews.map((item) => (
-            <VideoCard key={item.id} item={item} wid={true} />
-          ))}
+
+      <div className="px-4 2xl:px-16 py-[80px] md:py-[120px] lg:py-[200px] bg-[#F5F5F5]">
+        <div className="mb-4">
+          <p className="text-green-600 text-md font-bold">Our Blog</p>
+          <h1 className="text-4xl font-bold">Recent club news</h1>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <VideoCard item={mainVideo} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {videoNews.map((item) => (
+              <VideoCard key={item.id} item={item} wid={true} />
+            ))}
+          </div>
         </div>
       </div>
       <TicketSlider />

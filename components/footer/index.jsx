@@ -25,7 +25,7 @@ const Footer = () => {
           <p className="text-2xl font-semibold mt-1">TO OUR NEWSLETTER</p>
 
           {/* Input Field & Button */}
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex flex-col gap-2 md:gap-0 md:flex-row justify-center">
             <input
               type="email"
               placeholder="Your email ..."
