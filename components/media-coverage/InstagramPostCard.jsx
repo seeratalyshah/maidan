@@ -3,9 +3,9 @@ import { FaInstagram } from "react-icons/fa";
 
 const InstagramPostCard = ({ post }) => {
   return (
-    <div className="relative group overflow-hidden bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-xl shadow-lg transition-all transform hover:scale-105 duration-300">
+    <div className="relative group overflow-hidden bg-white bg-opacity-10 backdrop-blur-md p-4 shadow-lg transition-all transform hover:scale-105 duration-300">
       {/* Instagram Image */}
-      <div className="w-full h-[300px] rounded-lg overflow-hidden">
+      <div className="w-full h-[300px]  overflow-hidden">
         <Image
           src={post.imageUrl}
           alt={post.caption}

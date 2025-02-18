@@ -106,7 +106,7 @@ const FeaturedMedia = () => {
 
               {/* Button at the bottom */}
               <div className="mt-auto">
-                <a href={item.link}>
+                <a href={item.link} target="_blank">
                   <button className="w-full px-8 py-2 bg-green-600 hover:bg-green-700 text-white text-md font-medium">
                     Read More
                   </button>

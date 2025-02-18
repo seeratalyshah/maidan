@@ -20,6 +20,7 @@ import {
 import MatchSlider from "@/sections/MatchesSlider";
 import TicketSlider from "@/sections/TicketsSlider";
 import PlayerSlider from "@/sections/PlayersSlider";
+import OurTeam from "@/sections/OurTeam";
 
 export default function Home() {
   return (
@@ -73,7 +74,7 @@ export default function Home() {
         </div>
       </div>
       <TicketSlider />
-      <div className="flex flex-col pt-[80px] pb-[60px] md:pt-[200px] md:pb-[100px]">
+      <div className="flex flex-col pt-[80px] md:pt-[200px]">
         <div className="px-4 2xl:px-16 mb-10">
           <p className="text-green-600 text-md font-bold text-center mb-3">
             Our Team
@@ -83,8 +84,9 @@ export default function Home() {
           </h1>
         </div>
         <TeamShowcase />
-        <PlayerSlider />
+        {/* <PlayerSlider /> */}
       </div>
+      {/* <OurTeam /> */}
     </div>
   );
 }
