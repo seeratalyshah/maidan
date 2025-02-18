@@ -7,7 +7,7 @@ const MediaContact = () => {
     name: "",
     email: "",
     organization: "",
-    inquiryType: "Interview Request",
+    inquiryType: "",
     message: "",
   });
 
@@ -22,7 +22,7 @@ const MediaContact = () => {
   };
 
   return (
-    <section className="px-4 2xl:px-16 py-[100px]">
+    <section className="px-4 2xl:px-16 py-[80px] md:py-[100px] bg-[#F5F5F5]">
       <div className="max-w-4xl mx-auto bg-white p-8 border-t border-slate-100 shadow-lg">
         <h2 className="text-3xl font-bold text-center text-green-600">
           Press & Media Inquiries
@@ -65,11 +65,15 @@ const MediaContact = () => {
             name="inquiryType"
             value={formData.inquiryType}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none appearance-none" // Removed arrow with appearance-none
           >
-            <option>Interview Request</option>
-            <option>Article Feature</option>
-            <option>General Query</option>
+            <option value="" disabled >
+              Select Inquiry Type
+            </option>
+            {/* Placeholder option */}
+            <option value="Interview Request">Interview Request</option>
+            <option value="Article Feature">Article Feature</option>
+            <option value="General Query">General Query</option>
           </select>
           <textarea
             name="message"

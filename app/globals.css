@@ -10,3 +10,13 @@
 .custom-dropdown:hover{
  background-color: silver !important;
 }
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex !important;
+  flex-direction: row !important; 
+}

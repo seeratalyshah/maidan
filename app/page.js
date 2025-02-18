@@ -28,7 +28,7 @@ export default function Home() {
       <MatchSection />
       <MatchSlider />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 px-4 2xl:px-16 gap-8 py-[200px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 px-4 2xl:px-16 gap-8 py-[80px] md:py-[120px] lg:py-[200px]">
         <div className="col-span-1 lg:col-span-2">
           <div className="mb-4">
             <p className="text-green-600 text-md font-bold">Our Blog</p>
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 2xl:px-16 py-[200px] bg-[#F5F5F5]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 2xl:px-16 py-[80px] md:py-[120px] lg:py-[200px] bg-[#F5F5F5]">
         <VideoCard item={mainVideo} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {videoNews.map((item) => (
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </div>
       <TicketSlider />
-      <div className="flex flex-col pt-[200px] pb-[100px]">
+      <div className="flex flex-col pt-[80px] pb-[60px] md:pt-[200px] md:pb-[100px]">
         <div className="px-4 2xl:px-16 mb-10">
           <p className="text-green-600 text-md font-bold text-center mb-3">
             Our Team
@@ -77,9 +77,6 @@ export default function Home() {
         </div>
         <TeamShowcase />
         <PlayerSlider />
-        {/* <div className="bg-[#F5F5F5] px-4 2xl:px-16 py-[100px] flex justify-center">
-          <PlayerCard number="1" name="HENRY WILSON" position="GOALKEEPER" />
-        </div> */}
       </div>
     </div>
   );

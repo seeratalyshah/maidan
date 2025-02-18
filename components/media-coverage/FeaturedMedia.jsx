@@ -1,60 +1,64 @@
 import React from "react";
 import news1 from "@/images/news1.JPG";
 import news4 from "@/images/news4.JPG";
+import news7 from "@/images/news7.jpg";
+import news8 from "@/images/news8.jpg";
 import Image from "next/image";
 import geoLogo from "@/images/geo-logo.png";
-import fifaLogo from "@/images/fifa-logo.png";
-import euroLogo from "@/images/euro-logo.png";
-import nationLogo from "@/images/nation-logo.png";
-import appLogo from "@/images/app-logo.png";
-import samaLogo from "@/images/sama-logo.jpg";
+import peLogo from "@/images/pe-logo.png";
+import theNewsLogo from "@/images/the-news-logo.png";
+import nrk from "@/images/nrk.png";
+import news9 from "@/images/news9.jpg";
 
 const featuredNews = [
   {
     id: 1,
     image: news1,
-    newsChannels: [fifaLogo],
-    title:
-      "Recognized Pakistan’s Street Child Football Team among the best in the Street Child World Cup",
+    newsChannels: [peLogo],
+    link: "https://mofa.gov.pk/press-releases/pakistan-qualifies-for-street-child-football-world-cup-final?mission=abu-dhabi",
+    title: "Pakistan qualifies for Street Child Football World Cup Final",
     date: "October 14, 2022",
     description:
-      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+      "Pakistan has reached the final of the Street Child Football World Cup 2018. The event is held right before every FIFA World Cup to highlight the plight of street children all over the world.",
   },
   {
     id: 2,
-    image: news4,
-    newsChannels: [euroLogo],
+    image: news7,
+    newsChannels: [geoLogo],
+    link: "https://www.geo.tv/latest/556740-pakistan-street-child-football-team-secures-spot-in-norway-cup-2024-playoffs",
     title:
       "Highlighted Maidaan’s impact, showcasing Pakistan’s team winning the hearts of crowds in Qatar",
-    date: "October 14, 2022",
+    date: "July 30, 2024",
     description:
       "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
   },
   {
     id: 3,
-    image: news4,
-    newsChannels: [geoLogo, nationLogo],
+    image: news8,
+    newsChannels: [theNewsLogo],
+    link: "https://www.thenews.com.pk/print/1214377-win-for-pakistan-street-child-team",
     title:
-      "Reported on Pakistan’s qualification for the Norway Cup 2024 playoffs and the official squad announcement",
-    date: "October 14, 2022",
+      "Win for Pakistan street child team",
+    date: "July 29, 2024",
     description:
-      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+      "ISLAMABAD: Pakistan’s street child football team Sunday got off to a winning start in the Norway Cup beating Norway’s Astoor Club 6-1 in Oslo (Norway). ",
   },
   {
     id: 4,
-    image: news4,
-    newsChannels: [appLogo, samaLogo],
+    image: news9,
+    newsChannels: [nrk],
+    link: "https://www.nrk.no/norge/muslim-hands-pakistan-_-et-lag-med-gategutter-pa-norway-cup-1.16504248",
     title:
-      "Covered the Pakistan team’s arrival in Oslo and their journey in the Norway Cup 2024",
-    date: "October 14, 2022",
+      "From the Streets to the Norway Cup: 'They Came with Worn-Out Football Shoes Taped Together'",
+    date: "Aug 04, 2023",
     description:
-      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+      "The Pakistani street football team has sparked enormous enthusiasm. Now, the 17-year-olds are ready for the Norway Cup final.",
   },
 ];
 
 const FeaturedMedia = () => {
   return (
-    <div className="px-4 2xl:px-16  py-[200px]">
+    <div className="px-4 2xl:px-16 py-[80px] md:py-[120px] lg:py-[200px]">
       <div className="mb-8">
         <h1 className="text-4xl font-bold">Latest Headlines</h1>
       </div>
@@ -74,7 +78,7 @@ const FeaturedMedia = () => {
                   <Image
                     src={news}
                     alt="news-logo"
-                    className="w-8 h-8 rounded-md"
+                    className="w-6 h-6 rounded-md"
                     key={index}
                   />
                 ))}
@@ -102,9 +106,11 @@ const FeaturedMedia = () => {
 
               {/* Button at the bottom */}
               <div className="mt-auto">
-                <button className="w-full px-8 py-2 bg-green-600 hover:bg-green-700 text-white text-md font-medium">
-                  Read More
-                </button>
+                <a href={item.link}>
+                  <button className="w-full px-8 py-2 bg-green-600 hover:bg-green-700 text-white text-md font-medium">
+                    Read More
+                  </button>
+                </a>
               </div>
             </div>
           </div>

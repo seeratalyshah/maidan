@@ -3,13 +3,13 @@ const PlayerCard = ({ item }) => {
     <div className="p-6 text-center relative w-[500px] flex flex-col items-center justify-center z-10">
       {/* Large Number in Background (Behind the Card) */}
       <div className="absolute inset-0 flex items-center justify-center -z-10">
-        <span className="text-[300px] font-bold text-white opacity-60">
+        <span className="text-xl md:text-[300px] font-bold text-white opacity-60">
           {item.number}
         </span>
       </div>
 
       {/* Player Name */}
-      <h2 className="text-4xl font-bold text-black">{item.name}</h2>
+      <h2 className="text-xl md:text-4xl font-bold text-black">{item.name}</h2>
 
       {/* Position */}
       <p className="text-sm font-semibold mt-3">

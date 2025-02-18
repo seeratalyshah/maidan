@@ -8,7 +8,7 @@ const VideoCard = ({ wid, item }) => {
         <Image
           src={item.image}
           alt="Football Match"
-          className={`"w-full ${wid ? "h-[200px]" : "h-[500px]"} object-cover"`}
+          className={`"w-full ${wid ? "h-[200px]" : "h-[300px] md:h-[500px]"} object-cover"`}
         />
         <div className="absolute top-0 left-0 font-bold px-4 py-3">
           <button className="flex items-center hover:gap-2 transition-transform bg-white text-black font-bold py-1 px-2 rounded-full shadow-md border border-gray-300">

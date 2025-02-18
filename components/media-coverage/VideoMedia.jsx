@@ -81,7 +81,7 @@ const VideoSocialMediaCoverage = () => {
   }, []);
 
   return (
-    <section className="px-4 2xl:px-16 py-[100px] bg-[#F5F5F5]">
+    <section className="px-4 2xl:px-16 py-[80px] md:py-[100px]">
       <div className="container mx-auto text-center">
         <h1 className="text-4xl font-bold mb-6">Watch Our Journey</h1>
 
@@ -89,10 +89,10 @@ const VideoSocialMediaCoverage = () => {
         <div className="mb-12">
           <div className="">
             <div className="flex justify-between items-end gap-8">
-              <h1 className="text-4xl font-bold text-green-600  w-full max-w-[700px] uppercase leading-1 text-left">
+              <h1 className="text-2xl md:text-4xl font-bold text-green-600  w-full max-w-[700px] uppercase leading-1 text-left">
                 Maidaan’s Journey
               </h1>
-              <div className="flex items-center justify-center gap-8 mt-10">
+              <div className="flex items-center justify-center gap-6 mt-10">
                 <button
                   onClick={handlePrev}
                   className="text-white bg-black p-3 cursor-pointer hover:bg-gray-400"
@@ -110,12 +110,14 @@ const VideoSocialMediaCoverage = () => {
 
             <div className="mt-8 w-full">
               <Swiper
-                modules={[Navigation, Pagination, Autoplay, EffectFade, A11y]}
+                modules={[Navigation, Pagination, Autoplay, A11y]} 
+                direction="horizontal" 
+                slidesPerView={1}
                 spaceBetween={15}
                 breakpoints={{
-                  480: { slidesPerView: 1 }, 
-                  640: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 }, 
+                  374: { slidesPerView: 1 },
+                  768: { slidesPerView: 1 },
+                  1024: { slidesPerView: 3 },
                 }}
                 onSwiper={setSwiperInstance}
                 className="w-full"

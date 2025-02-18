@@ -11,6 +11,7 @@ import euroLogo from "@/images/euro-logo.png";
 import nrk from "@/images/nrk.png";
 
 const mediaCategories = [
+  "All",
   "FIFA",
   "UN",
   "Al Jazeera",
@@ -75,27 +76,28 @@ const mediaCoverage = [
     video: "",
   },
   {
-    id: 5,
+    id: 6,
     outlet: "ARAB NEWS",
     logo: arabNews,
     title:
       "Pakistan PM promises to promote football after street team’s stellar Norway performance",
     summary:
-      "Pakistan’s street child football team is primarily composed of underprivileged children with limited resources",
+      "Pakistan’s street child football team is primarily composed of underprivileged children with limited resources.",
     link: "https://www.arabnews.com/node/2570967/pakistan",
     video: "https://www.youtube.com/embed/XQUEq6sKluc",
   },
 ];
 
 const InternationalMedia = () => {
-  const [selectedOutlet, setSelectedOutlet] = useState("FIFA");
+  const [selectedOutlet, setSelectedOutlet] = useState("All");
 
-  const filteredMedia = mediaCoverage.filter(
-    (item) => item.outlet === selectedOutlet
-  );
+  const filteredMedia =
+    selectedOutlet === "All"
+      ? mediaCoverage
+      : mediaCoverage.filter((item) => item.outlet === selectedOutlet);
 
   return (
-    <div className="px-4 2xl:px-16 pb-[100px]">
+    <div className="px-4 2xl:px-16 pb-[80px] md:pb-[100px]">
       <div className="mb-8">
         <h1 className="text-4xl font-bold">Global Recognition</h1>
       </div>
@@ -105,7 +107,6 @@ const InternationalMedia = () => {
         Select a media outlet to filter the news coverage.
       </p>
 
-      {/* Dropdown Filter */}
       <div className="mb-4 relative w-full md:w-1/3">
         <select
           className="px-4 py-2 border border-green-600 font-medium rounded-md w-full bg-white focus:outline-none focus:ring-2 focus:ring-green-600 appearance-none hover:bg-slate-100"
@@ -113,7 +114,7 @@ const InternationalMedia = () => {
           onChange={(e) => setSelectedOutlet(e.target.value)}
         >
           {mediaCategories.map((category) => (
-            <option key={category} value={category} className="custom-dropdown">
+            <option key={category} value={category}>
               {category}
             </option>
           ))}
@@ -122,10 +123,13 @@ const InternationalMedia = () => {
 
       {/* Media Display */}
       {filteredMedia.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {filteredMedia.map((item) => (
-            <div key={item.id} className="bg-white shadow-lg p-4">
-              <div className="flex items-center space-x-4">
+            <div
+              key={item.id}
+              className="bg-white shadow-lg p-4 flex flex-col h-full"
+            >
+              <div className="flex items-start space-x-4">
                 <Image
                   src={item.logo}
                   alt="Outlet Logo"
@@ -135,29 +139,30 @@ const InternationalMedia = () => {
                 />
                 <h2 className="text-xl font-semibold">{item.title}</h2>
               </div>
-              <p className="text-gray-600 mt-2">{item.summary}</p>
-              <div className="mt-4 flex justify-between items-center">
+              <p className="text-gray-600 my-2">{item.summary}</p>
+              <div className="mt-auto flex justify-end items-end">
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-green-600 hover:text-green-500 "
+                  className="text-green-600 flex items-center"
                 >
-                  Read More <FaExternalLinkAlt className="ml-2" />
+                  Read More
+                  <FaExternalLinkAlt className="ml-2" />
                 </a>
               </div>
-              {item.video && (
-                <div className="mt-4">
-                  <iframe
-                    width="100%"
-                    height="200"
-                    src={item.video}
-                    title="Media Coverage"
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              )}
+              {/* {item.video && (
+                            <div className="mt-4">
+                              <iframe
+                                width="100%"
+                                height="200"
+                                src={item.video}
+                                title="Media Coverage"
+                                frameBorder="0"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+                          )} */}
             </div>
           ))}
         </div>

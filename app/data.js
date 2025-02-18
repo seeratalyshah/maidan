@@ -1,6 +1,5 @@
 import atleticos from "@/images/atleticos.png";
 import ailton from "@/images/ailton.png";
-import slide1 from "@/images/slide1.jpg";
 import barcode from "@/images/atleticos.png";
 import salford from "@/images/atleticos.png";
 import news1 from "@/images/news1.JPG";

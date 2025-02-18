@@ -85,27 +85,26 @@ const MatchSlider = () => {
   };
 
   return (
-    <div className="py-[100px] bg-[#F5F5F5] px-4 2xl:px-16">
-      <div className="">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectFade, A11y]}
-          slidesPerView={1}
-          spaceBetween={15}
-          breakpoints={{
-            480: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          onSwiper={setSwiperInstance}
-          className="w-full"
-        >
-          {matches.map((match) => (
-            <SwiperSlide key={match.id}>
-              <MatchCard item={match} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+    <div className="py-[80px] md:py-[100px] bg-[#F5F5F5] px-4 2xl:px-16">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay, EffectFade, A11y]}
+        slidesPerView={1}
+        spaceBetween={15}
+        breakpoints={{
+          480: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        onSwiper={setSwiperInstance}
+        className="w-full"
+      >
+        {matches.map((match) => (
+          <SwiperSlide key={match.id}>
+            <MatchCard item={match} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
       <div className="flex items-center justify-center gap-8 mt-10">
         <button
           onClick={handlePrev}

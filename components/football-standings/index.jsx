@@ -143,13 +143,13 @@ const FootballStandings = () => {
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-green-600 text-white text-left">
-            <th className="p-3">Football Club</th>
-            <th className="p-3">PL</th>
-            <th className="p-3">W</th>
-            <th className="p-3">D</th>
-            <th className="p-3">L</th>
-            <th className="p-3">GD</th>
-            <th className="p-3">PTS</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">Football Club</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">PL</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">W</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">D</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">L</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">GD</th>
+            <th className="p-2 md:p-3 text-sm md:text-[16px]">PTS</th>
           </tr>
         </thead>
         <tbody>
@@ -167,14 +167,28 @@ const FootballStandings = () => {
                   height={20}
                   className="rounded-full"
                 />
-                <span className="text-sm font-semibold">{team.name}</span>
+                <span className="text-sm font-normal md:font-semibold truncate max-w-[10ch] md:max-w-full">
+                  {team.name}
+                </span>
               </td>
-              <td className="font-semibold text-md">{team.played}</td>
-              <td className="font-semibold text-md">{team.won}</td>
-              <td className="font-semibold text-md">{team.draw}</td>
-              <td className="font-semibold text-md">{team.lost}</td>
-              <td className="font-semibold text-md">{team.gd}</td>
-              <td className="font-semibold text-md">{team.pts}</td>
+              <td className="font-normal md:font-semibold text-sm">
+                {team.played}
+              </td>
+              <td className="font-normal md:font-semibold text-sm">
+                {team.won}
+              </td>
+              <td className="font-normal md:font-semibold text-sm">
+                {team.draw}
+              </td>
+              <td className="font-normal md:font-semibold text-sm">
+                {team.lost}
+              </td>
+              <td className="font-normal md:font-semibold text-sm">
+                {team.gd}
+              </td>
+              <td className="font-normal md:font-semibold text-sm">
+                {team.pts}
+              </td>
             </tr>
           ))}
         </tbody>

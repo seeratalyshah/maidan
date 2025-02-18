@@ -7,8 +7,10 @@ import nationLogo from "@/images/nation-logo.png";
 import theNewsLogo from "@/images/the-news-logo.png";
 import isbLogo from "@/images/islamabad.webp";
 import inpLogo from "@/images/inp-logo.png";
+import peLogo from "@/images/pe-logo.png";
 
 const mediaCategories = [
+  "All",
   "Geo News",
   "The Nation",
   "The News",
@@ -17,6 +19,7 @@ const mediaCategories = [
   "FIFA",
   "UN",
   "Al Jazeera",
+  "Pakistan Embassy",
 ];
 
 const mediaCoverage = [
@@ -33,13 +36,12 @@ const mediaCoverage = [
   },
   {
     id: 2,
-    outlet: "The Nation",
-    logo: nationLogo,
-    title:
-      "Pakistan Street Child Football Team reaches Oslo for Norway Cup 2024",
+    outlet: "Pakistan Embassy",
+    logo: peLogo,
+    title: "Pakistan qualifies for Street Child Football World Cup Final",
     summary:
-      "LAHORE    -   The Pakistan Street Child Football Team reached Oslo, Norway, to participate in the Norway Cup 2024 on Saturday.",
-    link: "https://www.nation.com.pk/28-Jul-2024/pakistan-street-child-football-team-reaches-oslo-for-norway-cup-2024",
+      "Pakistan has reached the final of the Street Child Football World Cup 2018. The event is held right before every FIFA World Cup to highlight the plight of street children all over the world. This is Pakistan's highest ever spot in the tournament. ",
+    link: "https://mofa.gov.pk/press-releases/pakistan-qualifies-for-street-child-football-world-cup-final?mission=abu-dhabi",
     video: "",
   },
   {
@@ -54,6 +56,17 @@ const mediaCoverage = [
   },
   {
     id: 4,
+    outlet: "The Nation",
+    logo: nationLogo,
+    title:
+      "Pakistan Street Child Football Team reaches Oslo for Norway Cup 2024",
+    summary:
+      "LAHORE    -   The Pakistan Street Child Football Team reached Oslo, Norway, to participate in the Norway Cup 2024 on Saturday.",
+    link: "https://www.nation.com.pk/28-Jul-2024/pakistan-street-child-football-team-reaches-oslo-for-norway-cup-2024",
+    video: "",
+  },
+  {
+    id: 5,
     outlet: "Islamabad Scene",
     logo: isbLogo,
     title: "Pakistan finishes Street Child Football World Cup runner up",
@@ -63,7 +76,7 @@ const mediaCoverage = [
     video: "",
   },
   {
-    id: 5,
+    id: 6,
     outlet: "INP",
     logo: inpLogo,
     title:
@@ -76,24 +89,25 @@ const mediaCoverage = [
 ];
 
 const NationalMedia = () => {
-  const [selectedOutlet, setSelectedOutlet] = useState("Geo News");
+  const [selectedOutlet, setSelectedOutlet] = useState("All");
 
-  const filteredMedia = mediaCoverage.filter(
-    (item) => item.outlet === selectedOutlet
-  );
+  const filteredMedia =
+    selectedOutlet === "All"
+      ? mediaCoverage
+      : mediaCoverage.filter((item) => item.outlet === selectedOutlet);
 
   return (
-    <div className="px-4 2xl:px-16 py-[100px] bg-[#F5F5F5]">
+    <div className="px-4 2xl:px-16 py-[80px] md:py-[100px] bg-[#F5F5F5]">
       <h1 className="text-4xl font-bold mb-10">
-        Pakistan’s Pride in the Media'n
+        Pakistan’s Pride in the Media
       </h1>
 
       {/* Filters */}
-      <div className="flex space-x-4 overflow-x-auto pb-4 border-b">
+      <div className="flex space-x-4 overflow-x-auto pb-4 border-b lg:overflow-x-visible">
         {mediaCategories.map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 text-md font-medium border rounded-md hover:opacity-80 ${
+            className={`px-4 py-2 text-md font-medium border rounded-md hover:opacity-80 whitespace-nowrap ${
               selectedOutlet === category
                 ? "bg-green-600 text-white"
                 : "bg-gray-200 text-gray-800"
@@ -109,8 +123,11 @@ const NationalMedia = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {filteredMedia.length > 0 ? (
           filteredMedia.map((item) => (
-            <div key={item.id} className="bg-white shadow-lg p-4">
-              <div className="flex items-center space-x-4">
+            <div
+              key={item.id}
+              className="bg-white shadow-lg p-4 flex flex-col h-full"
+            >
+              <div className="flex items-start space-x-4">
                 <Image
                   src={item.logo}
                   alt="Outlet Logo"
@@ -120,8 +137,8 @@ const NationalMedia = () => {
                 />
                 <h2 className="text-xl font-semibold">{item.title}</h2>
               </div>
-              <p className="text-gray-600 mt-2">{item.summary}</p>
-              <div className="mt-4 flex justify-between items-center">
+              <p className="text-gray-600 my-2">{item.summary}</p>
+              <div className="mt-auto flex justify-end items-end">
                 <a
                   href={item.link}
                   target="_blank"

@@ -8,10 +8,6 @@ import {
   A11y,
 } from "swiper/modules";
 import { useState } from "react";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/effect-fade";
 import {
   HiOutlineArrowNarrowLeft,
   HiOutlineArrowNarrowRight,
@@ -51,37 +47,36 @@ const PlayersSlider = () => {
   };
 
   return (
-    <div className="bg-[#F5F5F5] px-4 2xl:px-16 py-[100px]">
-      <div className="flex items-center gap-4 mt-10" style={{width: "100%", maxWidth: "600px", marginInline: "auto"}}>
+    <div className="bg-[#F5F5F5] px-4 2xl:px-16 py-[60px] md:py-[100px]">
+      <div
+        className="flex items-center gap-4 mt-10"
+        style={{ width: "100%", maxWidth: "600px", marginInline: "auto" }}
+      >
         <button
           onClick={handlePrev}
-          className="z-10 text-black  bg-white p-3 cursor-pointer transition-opacity duration-300 hover-bg"
+          className="z-10 text-black bg-white p-1 md:p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
-          <HiOutlineArrowNarrowLeft size={32} />
+          <HiOutlineArrowNarrowLeft size={24} />
         </button>
         <Swiper
           modules={[Navigation, Pagination, Autoplay, EffectFade, A11y]}
-          slidesPerView={1}
+          slidesPerView={1} // Always show 1 card per screen size
           spaceBetween={15}
-          breakpoints={{
-            480: { slidesPerView: 1 },
-            740: { slidesPerView: 1 },
-            1275: { slidesPerView: 1 },
-          }}
           onSwiper={setSwiperInstance}
           className="w-full"
+          direction="horizontal"
         >
           {players.map((player) => (
-            <SwiperSlide key={player.id} className="">
+            <SwiperSlide key={player.id}>
               <PlayerCard item={player} />
             </SwiperSlide>
           ))}
         </Swiper>
         <button
           onClick={handleNext}
-          className="z-10 text-black  bg-white p-3 cursor-pointer transition-opacity duration-300 hover-bg"
+          className="z-10 text-black bg-white p-1 md:p-3 cursor-pointer transition-opacity duration-300 hover-bg"
         >
-          <HiOutlineArrowNarrowRight size={32} />
+          <HiOutlineArrowNarrowRight size={24} />
         </button>
       </div>
     </div>

@@ -20,7 +20,7 @@ const slides = [
     title:
       "Maidaan in the Spotlight – <span class='text-green-500 italic'>Global & National </span>Recognition",
     desc: "Discover how Maidaan’s football initiative is transforming lives and gaining global recognition",
-    buttonText: "Read Featured News",
+    buttonText: "Read More",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const slides = [
     title:
       "Maidaan in the Spotlight – <span class='text-green-500 italic'>Global & National </span>Recognition",
     desc: "Discover how Maidaan’s football initiative is transforming lives and gaining global recognition",
-    buttonText: "Read Featured News",
+    buttonText: "Read More",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const slides = [
     title:
       "Maidaan in the Spotlight – <span class='text-green-500 italic'>Global & National </span>Recognition",
     desc: "Discover how Maidaan’s football initiative is transforming lives and gaining global recognition",
-    buttonText: "Read Featured News",
+    buttonText: "Read More",
   },
 ];
 
@@ -64,13 +64,13 @@ export default function HeroSlider() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               <div className="absolute bottom-[100px] left-0 right-0">
-                <div className="flex justify-between items-end w-full p-6 md:p-20">
+                <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-end w-full p-6 md:p-20">
                   <div className="flex flex-col items-start justify-center text-white gap-6">
                     <h1
-                      className="text-4xl md:text-6xl font-bold leading-tight w-full max-w-[900px]"
+                      className="text-3xl md:text-6xl font-bold leading-tight w-[300px] md:w-[900px]"
                       dangerouslySetInnerHTML={{ __html: slide.title }}
                     ></h1>
-                    <p className="text-lg md:text-xl font-bold leading-tight w-full max-w-[900px]">
+                    <p className="text-md md:text-xl font-bold leading-tight w-full max-w-[900px]">
                       {slide.desc}
                     </p>
                     <button className="mt-4 px-10 py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-medium flex items-center gap-4">
