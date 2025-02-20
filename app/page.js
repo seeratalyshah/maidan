@@ -1,13 +1,13 @@
-import FootballStandings from "@/components/football-standings";
-import HeroSlider from "@/components/her-silder";
-import MatchCard from "@/components/match-card";
-import MatchSection from "@/components/match-section";
-import MatchTicket from "@/components/match-ticket";
-import NewssCard from "@/components/new-news-card";
-import NewsCard from "@/components/news-card";
-import PlayerCard from "@/components/player-card";
-import TeamShowcase from "@/components/team-showcase";
-import VideoCard from "@/components/video-card";
+import FootballStandings from "@/app/home/football-standings";
+import HeroSlider from "@/app/home/her-silder";
+import MatchCard from "@/app/home/match-card";
+import MatchSection from "@/app/home/match-section";
+import MatchTicket from "@/app/home/match-ticket";
+import NewssCard from "@/app/home/new-news-card";
+import NewsCard from "@/app/home/news-card";
+import PlayerCard from "@/app/home/player-card";
+import TeamShowcase from "@/app/home/team-showcase";
+import VideoCard from "@/app/home/video-card";
 import bgImage from "@/images/tickets_BG.jpg";
 import {
   mainVideo,
@@ -17,19 +17,21 @@ import {
   tickets,
   videoNews,
 } from "./data";
-import MatchSlider from "@/sections/MatchesSlider";
-import TicketSlider from "@/sections/TicketsSlider";
-import PlayerSlider from "@/sections/PlayersSlider";
-import OurTeam from "@/sections/OurTeam";
+import MatchSlider from "@/app/home/MatchesSlider";
+import TicketSlider from "@/app/home/TicketsSlider";
+import PlayerSlider from "@/app/home/PlayersSlider";
+import OurTeam from "@/app/home/OurTeam";
 
 export default function Home() {
   return (
-    <div className="">
-      <HeroSlider />
-      <MatchSection />
-      <MatchSlider />
+    <div className="flex flex-col gap-16 md:gap-24 lg:gap-32">
+      <div>
+        <HeroSlider />
+        <MatchSection />
+        <MatchSlider />
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 px-4 2xl:px-16 gap-8 py-[80px] md:py-[120px] lg:py-[200px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 px-4 md:px-16 lg:px-24 gap-8">
         <div className="col-span-1 lg:col-span-2">
           <div className="mb-4">
             <p className="text-green-600 text-md font-bold">Our Blog</p>
@@ -59,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-4 2xl:px-16 py-[80px] md:py-[120px] lg:py-[200px] bg-[#F5F5F5]">
+      <div className="p-4 md:p-16 lg:p-24 bg-[#F5F5F5]">
         <div className="mb-4">
           <p className="text-green-600 text-md font-bold">Our Blog</p>
           <h1 className="text-4xl font-bold">Recent club news</h1>
@@ -74,8 +76,8 @@ export default function Home() {
         </div>
       </div>
       <TicketSlider />
-      <div className="flex flex-col pt-[80px] md:pt-[200px]">
-        <div className="px-4 2xl:px-16 mb-10">
+      <div className="flex flex-col">
+        <div className="px-16 md:px-24 mb-10">
           <p className="text-green-600 text-md font-bold text-center mb-3">
             Our Team
           </p>

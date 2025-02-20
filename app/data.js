@@ -67,6 +67,59 @@ export const newsCards = [
   },
 ];
 
+export const blogs = [
+  {
+    id: 1,
+    image: news1,
+    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
+    date: "October 14, 2022",
+    views: 325,
+    comments: 0,
+    description:
+      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+  },
+  {
+    id: 2,
+    image: news4,
+    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
+    date: "October 14, 2022",
+    views: 325,
+    comments: 0,
+    description:
+      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+  },
+  {
+    id: 3,
+    image: news4,
+    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
+    date: "October 14, 2022",
+    views: 325,
+    comments: 0,
+    description:
+      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+  },
+  {
+    id: 4,
+    image: news4,
+    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
+    date: "October 14, 2022",
+    views: 325,
+    comments: 0,
+    description:
+      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+  },
+  {
+    id: 5,
+    image: news4,
+    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
+    date: "October 14, 2022",
+    views: 325,
+    comments: 0,
+    description:
+      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+  },
+];
+
 export const shortNews = [
   {
     id: 1,

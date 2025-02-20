@@ -1,22 +1,24 @@
-import FeaturedMedia from '@/components/media-coverage/FeaturedMedia';
-import HeroSection from '@/components/media-coverage/HeroSection'
-import InternationalMedia from '@/components/media-coverage/InternationalMedia';
-import MediaContact from '@/components/media-coverage/MediaContact';
-import NationalMedia from '@/components/media-coverage/NationalMedia';
-import VideoSocialMediaCoverage from '@/components/media-coverage/VideoMedia';
-import React from 'react'
+import FeaturedMedia from "@/app/media-coverage/FeaturedMedia";
+import HeroSection from "@/app/media-coverage/HeroSection";
+import InternationalMedia from "@/app/media-coverage/InternationalMedia";
+import MediaContact from "@/app/media-coverage/MediaContact";
+import NationalMedia from "@/app/media-coverage/NationalMedia";
+import SocialMedia from "@/app/media-coverage/SocialMedia";
+import VideoSocialMediaCoverage from "@/app/media-coverage/VideoMedia";
+import React from "react";
 
 const MediaCoverage = () => {
   return (
-    <div className=''>
-        <HeroSection />
-        <FeaturedMedia />
-        <InternationalMedia />
-        <NationalMedia />
-        <VideoSocialMediaCoverage />
-        <MediaContact />
+    <div className="flex flex-col gap-16 md:gap-24 lg:gap-32">
+      <HeroSection />
+      <FeaturedMedia />
+      <InternationalMedia />
+      <NationalMedia />
+      <VideoSocialMediaCoverage />
+      <SocialMedia />
+      <MediaContact />
     </div>
-  )
-}
+  );
+};
 
 export default MediaCoverage;
