@@ -7,7 +7,6 @@ import {
   A11y,
 } from "swiper/modules";
 import { useState } from "react";
-import MatchCard from "@/app/home/match-card";
 import atleticos from "@/images/atleticos.png";
 import ailton from "@/images/ailton.png";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +14,7 @@ import {
   HiOutlineArrowNarrowLeft,
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
+import MatchCard from "../components/MatchCard";
 
 export const matches = [
   {

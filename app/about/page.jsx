@@ -1,12 +1,12 @@
-import AboutSection from "@/app/about/AboutSection";
-import AwardsSection from "@/app/about/AwardsSection";
-import BenefitsSection from "@/app/about/BenefitsSection";
-import CoachesSection from "@/app/about/CoachesSection";
-import HeroSection from "@/app/about/HeroSection";
-import QuoteSection from "@/app/about/QuoteSection";
-import VideoSection from "@/app/about/VideoSection";
-import WhatWeDo from "@/app/about/WhatWeDo";
-import WhyMaidaan from "@/app/about/WhyMaidaan";
+import AboutSection from "@/app/about/sections/AboutSection";
+import AwardsSection from "@/app/about/sections/AwardsSection";
+import BenefitsSection from "@/app/about/sections/BenefitsSection";
+import CoachesSection from "@/app/about/sections/CoachesSection";
+import HeroSection from "@/app/about/sections/HeroSection";
+import QuoteSection from "@/app/about/sections/QuoteSection";
+import VideoSection from "@/app/about/sections/VideoSection";
+import WhatWeDo from "@/app/about/sections/WhatWeDo";
+import WhyMaidaan from "@/app/about/sections/WhyMaidaan";
 import React from "react";
 
 const AboutUs = () => {

@@ -1,8 +1,8 @@
-import DonateSection from "@/app/support-maidaan/DonateSection";
-import HeroSection from "@/app/support-maidaan/HeroSection";
-import HowToDonate from "@/app/support-maidaan/HowToDonate";
-import MainSection from "@/app/support-maidaan/MainSection";
-import WhySupportMaidaan from "@/app/support-maidaan/WhySupportMaidan";
+import DonateSection from "@/app/support-maidaan/sections/DonateSection";
+import HeroSection from "@/app/support-maidaan/sections/HeroSection";
+import HowToDonate from "@/app/support-maidaan/sections/HowToDonate";
+import MainSection from "@/app/support-maidaan/sections/MainSection";
+import WhySupportMaidaan from "@/app/support-maidaan/sections/WhySupportMaidan";
 import React from "react";
 
 const Support = () => {

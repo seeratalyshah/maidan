@@ -1,10 +1,10 @@
-import FeaturedMedia from "@/app/media-coverage/FeaturedMedia";
-import HeroSection from "@/app/media-coverage/HeroSection";
-import InternationalMedia from "@/app/media-coverage/InternationalMedia";
-import MediaContact from "@/app/media-coverage/MediaContact";
-import NationalMedia from "@/app/media-coverage/NationalMedia";
-import SocialMedia from "@/app/media-coverage/SocialMedia";
-import VideoSocialMediaCoverage from "@/app/media-coverage/VideoMedia";
+import FeaturedMedia from "@/app/media-coverage/sections/FeaturedMedia";
+import HeroSection from "@/app/media-coverage/sections/HeroSection";
+import InternationalMedia from "@/app/media-coverage/sections/InternationalMedia";
+import MediaContact from "@/app/media-coverage/sections/MediaContact";
+import NationalMedia from "@/app/media-coverage/sections/NationalMedia";
+import SocialMedia from "@/app/media-coverage/sections/SocialMedia";
+import VideoSocialMediaCoverage from "@/app/media-coverage/sections/VideoMedia";
 import React from "react";
 
 const MediaCoverage = () => {

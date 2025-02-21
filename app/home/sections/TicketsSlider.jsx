@@ -13,7 +13,7 @@ import {
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 import { tickets } from "@/app/data";
-import MatchTicket from "@/app/home/match-ticket";
+import MatchTicket from "../components/MatchTicket";
 
 const TicketSlider = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);

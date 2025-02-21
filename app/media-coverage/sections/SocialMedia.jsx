@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import TweetCard from "./TweetCard";
-import InstagramPostCard from "./InstagramPostCard";
+import TweetCard from "../components/TweetCard";
+import InstagramPostCard from "../components/InstagramPostCard";
 import slide1 from "@/images/slide1.jpg";
 
 const SocialMedia = () => {
@@ -57,7 +57,9 @@ const SocialMedia = () => {
   return (
     <section className="bg-[#F5F5F5] p-4 md:p-16 lg:p-24">
       <div className="mx-auto">
-      <h1 className="text-3xl md:text-4xl font-bold uppercase leading-snug mb-10">Follow Us on Social Media</h1>
+        <h1 className="text-3xl md:text-4xl font-bold uppercase leading-snug mb-10">
+          Follow Us on Social Media
+        </h1>
 
         {/* Latest Tweets Section */}
         <div className="mb-8">
