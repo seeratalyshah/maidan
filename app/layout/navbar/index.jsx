@@ -48,13 +48,13 @@ const Navbar = () => {
           <Image
             src={logo}
             alt="logo"
-            className="cursor-pointer w-[68px] h-[68px] hidden md:block rounded-md"
+            className="cursor-pointer w-[68px] h-[68px] rounded-md"
             priority
           />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden sm:flex flex-1 justify-center">
+        <div className="hidden lg:flex flex-1 justify-center">
           <ul className="flex gap-10">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path}>
@@ -73,7 +73,7 @@ const Navbar = () => {
         </div>
 
         {/* Icons */}
-        <div className="hidden sm:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <FaUserCircle
             size={24}
             className="cursor-pointer text-white hover:text-green-600"
@@ -87,7 +87,7 @@ const Navbar = () => {
         {/* Mobile Menu Icon */}
         <div
           onClick={handleMenu}
-          className="sm:hidden cursor-pointer text-white"
+          className="lg:hidden cursor-pointer text-white"
         >
           <HiOutlineMenu size={25} />
         </div>
@@ -97,7 +97,7 @@ const Navbar = () => {
       <div
         className={`${
           menuOpen
-            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+            ? "fixed left-0 top-0 w-[65%] lg:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
             : "fixed left-[-100%] top-0 ease-in p-10 duration-500"
         }`}
       >

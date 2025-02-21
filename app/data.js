@@ -8,7 +8,7 @@ import news3 from "@/images/news3.jpeg";
 import news4 from "@/images/news4.JPG";
 import news5 from "@/images/news5.jpeg";
 import news6 from "@/images/news6.jpg";
-import video1 from "@/images/video1.png";
+import video1 from "@/images/video1.jpg";
 import video2 from "@/images/video2.JPG";
 import video3 from "@/images/video3.JPG";
 import video4 from "@/images/video4.jpg";
@@ -181,10 +181,12 @@ export const shortNews = [
 export const mainVideo = {
   id: 1,
   image: video1,
-  date: "February 28, 2018",
-  title: "Strategies for Environmentally Friendly Logistics Friendly Logistics",
+  videoUrl: "/videos/training-video.mp4",
+  date: "February 14, 2025",
+  title: "Pakistan's Largest Grassroots Football Development Program",
+  time: "02:00",
   description:
-    "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley Stadium to the historic significance of Maracanã, these […]…",
+    "Maidaan - Muslim Hands has kicked off its Preliminary Training Camp for over 175 Under-17 football players from across Pakistan! This camp is being held at Muhammad Rasheed Football Ground, Muslim Hands Educational Complex, Wazirabad. These street-connected children will receive food, accommodation, entertainment, and various healthy activities, along with intensive physical and football training. 🏋️‍♂️⚽The best-performing players will be shortlisted for Norway Cup 2025 and the Street Child Football World Cup USA 2026! 🌍🏆",
 };
 
 export const videoNews = [
@@ -192,6 +194,8 @@ export const videoNews = [
     id: 1,
     image: video2,
     date: "February 28, 2018",
+    videoUrl: "/videos/training-video.mp4",
+    time: "02:00",
     title:
       "Strategies for Environmentally Friendly Logistics Friendly Logistics",
     description:
@@ -200,6 +204,8 @@ export const videoNews = [
   {
     id: 2,
     image: video3,
+    time: "02:00",
+    videoUrl: "/videos/training-video.mp4",
     date: "February 28, 2018",
     title:
       "Strategies for Environmentally Friendly Logistics Friendly Logistics",
@@ -209,6 +215,8 @@ export const videoNews = [
   {
     id: 3,
     image: video4,
+    time: "02:00",
+    videoUrl: "/videos/training-video.mp4",
     date: "February 28, 2018",
     title:
       "Strategies for Environmentally Friendly Logistics Friendly Logistics",
@@ -218,6 +226,8 @@ export const videoNews = [
   {
     id: 4,
     image: video5,
+    time: "02:00",
+    videoUrl: "/videos/training-video.mp4",
     date: "February 28, 2018",
     title:
       "Strategies for Environmentally Friendly Logistics Friendly Logistics",
@@ -268,12 +278,38 @@ export const tickets = [
 export const videoGallery = [
   {
     id: 1,
+    type: "youtube",
     link: "https://www.youtube.com/embed/DKEaGvoFGLE",
     title: "Youtube Video",
   },
   {
     id: 2,
+    type: "local",
+    link: "/videos/bol-tv.mp4",
+    title: "Local Video",
+  },
+  {
+    id: 3,
+    type: "youtube",
     link: "https://www.youtube.com/embed/XQUEq6sKluc",
     title: "Youtube Video",
+  },
+  {
+    id: 4,
+    type: "local",
+    link: "/videos/training-video.mp4",
+    title: "Local Video",
+  },
+  {
+    id: 5,
+    type: "local",
+    link: "/videos/humtv.mp4",
+    title: "Local Video",
+  },
+  {
+    id: 6,
+    type: "local",
+    link: "/videos/express-news.mp4",
+    title: "Local Video",
   },
 ];
