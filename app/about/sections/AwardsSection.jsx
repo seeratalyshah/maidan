@@ -1,5 +1,5 @@
 import Image from "next/image";
-import trophy1 from "@/images/scwc.jpg";
+import trophy1 from "@/images/scwc.JPG";
 import trophy2 from "@/images/norway-cup.jpeg";
 import trophy3 from "@/images/national.jpeg";
 import trophy4 from "@/images/isb-conference.jpeg";
