@@ -20,9 +20,9 @@ const HeroSection = () => {
       
       {/* Content Over Image */}
       <div className="absolute bottom-[100px] left-0 right-0">
-        <div className="flex justify-between items-end w-full p-4 md:p-16 lg:p-24 md:p-20">
+        <div className="flex justify-between items-end w-full p-4 md:p-16 lg:p-24">
           <div className="flex flex-col items-start justify-center text-white gap-6 max-w-[900px]">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight uppercase">
               Maidaan in the Spotlight – <span className="text-green-600">Global & National</span> Recognition
             </h1>
             <p className="text-lg md:text-xl font-bold leading-tight">
