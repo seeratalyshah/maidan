@@ -17,7 +17,7 @@ const featuredNews = [
     newsChannels: [peLogo],
     link: "https://mofa.gov.pk/press-releases/pakistan-qualifies-for-street-child-football-world-cup-final?mission=abu-dhabi",
     title: "Pakistan qualifies for Street Child Football World Cup Final",
-    date: "October 14, 2022",
+    date: "October 14, 2018",
     description:
       "Pakistan has reached the final of the Street Child Football World Cup 2018. The event is held right before every FIFA World Cup to highlight the plight of street children all over the world.",
   },
@@ -27,10 +27,10 @@ const featuredNews = [
     newsChannels: [geoLogo],
     link: "https://www.geo.tv/latest/556740-pakistan-street-child-football-team-secures-spot-in-norway-cup-2024-playoffs",
     title:
-      "Highlighted Maidaan’s impact, showcasing Pakistan’s team winning the hearts of crowds in Qatar",
+      "Pakistan street child football team secures spot in Norway Cup 2024 playoffs",
     date: "July 30, 2024",
     description:
-      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+      "Playing under the name of Muslim Hands FC, Pakistan's U17 street child football team has grabbed a spot in the Norway Cup 2024 playoffs after their third consecutive victory as they defeated Oystese IL Oystese/Norheimsund 3-1 on Tuesday.",
   },
   {
     id: 3,

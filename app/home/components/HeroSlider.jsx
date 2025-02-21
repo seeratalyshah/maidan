@@ -85,7 +85,7 @@ export default function HeroSlider() {
                 <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-end w-full p-4 md:p-16 lg:p-24">
                   <div className="flex flex-col items-start justify-center text-white gap-6">
                     <h1
-                      className="text-3xl md:text-6xl font-bold leading-tight w-[300px] md:w-[900px]"
+                      className="text-3xl md:text-6xl font-bold leading-tight w-[300px] md:w-[900px] uppercase"
                       dangerouslySetInnerHTML={{ __html: slide.title }}
                     ></h1>
                     <p className="text-md md:text-xl font-bold leading-tight w-full max-w-[900px]">

@@ -7,7 +7,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
-import logo from "@/images/logo.png";
+import logo from "@/images/maidaan-logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,11 +37,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full h-24 border-b border-[#747474] z-20 transition-all duration-300 ${isScrolled ? "bg-black shadow-lg" : "bg-transparent"}`}>
+    <nav
+      className={`fixed w-full h-24 border-b border-[#747474] z-20 transition-all duration-300 ${
+        isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="flex justify-between items-center h-full w-full mx-auto px-4 md:px-16 lg:px-24">
         {/* Logo */}
         <Link href="/">
-          <Image src={logo} alt="logo" className="cursor-pointer" priority />
+          <Image
+            src={logo}
+            alt="logo"
+            className="cursor-pointer w-[68px] h-[68px] hidden md:block rounded-md"
+            priority
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -49,7 +58,13 @@ const Navbar = () => {
           <ul className="flex gap-10">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <li className={`text-[18px] font-normal cursor-pointer ${pathname === item.path ? "text-green-600" : "text-white hover:text-green-600"}`}>
+                <li
+                  className={`text-[18px] font-normal cursor-pointer ${
+                    pathname === item.path
+                      ? "text-green-600"
+                      : "text-white hover:text-green-600"
+                  }`}
+                >
                   {item.name}
                 </li>
               </Link>
@@ -59,18 +74,33 @@ const Navbar = () => {
 
         {/* Icons */}
         <div className="hidden sm:flex items-center gap-6">
-          <FaUserCircle size={24} className="cursor-pointer text-white hover:text-green-600" />
-          <FiSearch size={22} className="cursor-pointer text-white hover:text-green-600" />
+          <FaUserCircle
+            size={24}
+            className="cursor-pointer text-white hover:text-green-600"
+          />
+          <FiSearch
+            size={22}
+            className="cursor-pointer text-white hover:text-green-600"
+          />
         </div>
 
         {/* Mobile Menu Icon */}
-        <div onClick={handleMenu} className="sm:hidden cursor-pointer text-white">
+        <div
+          onClick={handleMenu}
+          className="sm:hidden cursor-pointer text-white"
+        >
           <HiOutlineMenu size={25} />
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`${menuOpen ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500" : "fixed left-[-100%] top-0 ease-in p-10 duration-500"}`}>
+      <div
+        className={`${
+          menuOpen
+            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+            : "fixed left-[-100%] top-0 ease-in p-10 duration-500"
+        }`}
+      >
         <div className="w-full flex justify-end items-center">
           <div onClick={handleMenu} className="cursor-pointer">
             <AiOutlineClose size={25} />
@@ -81,7 +111,12 @@ const Navbar = () => {
           <ul>
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <li onClick={() => setMenuOpen(false)} className={`cursor-pointer py-4 hover:text-green-600 ${pathname === item.path ? "text-green-600" : ""}`}>
+                <li
+                  onClick={() => setMenuOpen(false)}
+                  className={`cursor-pointer py-4 hover:text-green-600 ${
+                    pathname === item.path ? "text-green-600" : ""
+                  }`}
+                >
                   {item.name}
                 </li>
               </Link>
@@ -89,8 +124,14 @@ const Navbar = () => {
           </ul>
           {/* Mobile Icons */}
           <div className="flex items-center gap-6 pt-4">
-            <FaUserCircle size={24} className="cursor-pointer text-black hover:text-green-600" />
-            <FiSearch size={22} className="cursor-pointer text-black hover:text-green-600" />
+            <FaUserCircle
+              size={24}
+              className="cursor-pointer text-black hover:text-green-600"
+            />
+            <FiSearch
+              size={22}
+              className="cursor-pointer text-black hover:text-green-600"
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/images/club_01.JPG"; // Replace with your actual logo path
+import logo from "@/images/maidaan-logo.png"; // Replace with your actual logo path
 import trophyPlayer from "@/images/club_01.JPG"; // Replace with your actual image path
 
 const AboutSection = () => {
@@ -14,7 +14,7 @@ const AboutSection = () => {
             className="shadow-lg"
           />
           <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8">
-            <Image src={logo} alt="Atleticos Logo" className="w-24 md:w-32" />
+            <Image src={logo} alt="Atleticos Logo" className="w-24 md:w-32 rounded-lg" />
           </div>
         </div>
 

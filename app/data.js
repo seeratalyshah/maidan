@@ -13,6 +13,16 @@ import video2 from "@/images/video2.JPG";
 import video3 from "@/images/video3.JPG";
 import video4 from "@/images/video4.jpg";
 import video5 from "@/images/video5.JPG";
+import news7 from "@/images/news7.jpg";
+import news9 from "@/images/news9.jpg";
+import nrk from "@/images/nrk.png";
+import geoLogo from "@/images/geo-logo.png";
+import theNewsLogo from "@/images/the-news-logo.png";
+import news8 from "@/images/news8.jpg";
+import euroLogo from "@/images/euro-logo.png";
+import qatar from "@/images/qatar-2023.webp";
+import isbSCWC from "@/images/isb-scwc.webp";
+import isbLogo from "@/images/islamabad.webp";
 
 export const matches = [
   {
@@ -47,23 +57,29 @@ export const matches = [
 export const newsCards = [
   {
     id: 1,
-    image: news1,
-    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
-    date: "October 14, 2022",
+    image: news7,
+    channelLogo: geoLogo,
+    link: "https://www.geo.tv/latest/556740-pakistan-street-child-football-team-secures-spot-in-norway-cup-2024-playoffs",
+    title:
+      "Pakistan street child football team secures spot in Norway Cup 2024 playoffs",
+    date: "July 30, 2024",
     views: 325,
     comments: 0,
     description:
-      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+      "Playing under the name of Muslim Hands FC, Pakistan's U17 street child football team has grabbed a spot in the Norway Cup 2024 playoffs after their third consecutive victory as they defeated Oystese IL Oystese/Norheimsund 3-1 on Tuesday.",
   },
   {
     id: 2,
-    image: news4,
-    title: "PREMIER LEAGUE SHOWDOWN: TOP TEAMS CLASH IN WEEKEND BATTLE",
-    date: "October 14, 2022",
+    image: news9,
+    channelLogo: nrk,
+    link: "https://www.nrk.no/norge/muslim-hands-pakistan-_-et-lag-med-gategutter-pa-norway-cup-1.16504248",
+    title:
+      "From the Streets to the Norway Cup: 'They Came with Worn-Out Football Shoes Taped Together'",
+    date: "Aug 04, 2023",
     views: 325,
     comments: 0,
     description:
-      "National league football stadiums serve as iconic symbols of passion, rivalry, and sporting excellence around the world. From the grandeur of Wembley ...",
+      "The Pakistani street football team has sparked enormous enthusiasm. Now, the 17-year-olds are ready for the Norway Cup final.",
   },
 ];
 
@@ -123,35 +139,42 @@ export const blogs = [
 export const shortNews = [
   {
     id: 1,
-    image: news2,
-    date: "August 5, 2021",
-    title: "INJURY WOES CONTINUE FOR STAR STRIKER AHEAD OF CRUCIAL MATCH",
-    views: 167,
+    image: news8,
+    channelLogo: theNewsLogo,
+    link: "https://www.thenews.com.pk/print/1214377-win-for-pakistan-street-child-team",
+    title:
+      "Win for Pakistan street child team",
+    date: "July 29, 2024",
+    views: 325,
     comments: 0,
+    description:
+      "ISLAMABAD: Pakistan’s street child football team Sunday got off to a winning start in the Norway Cup beating Norway’s Astoor Club 6-1 in Oslo (Norway).",
   },
   {
     id: 2,
-    image: news3,
-    date: "August 5, 2021",
-    title: "INJURY WOES CONTINUE FOR STAR STRIKER AHEAD OF CRUCIAL MATCH",
-    views: 167,
+    image: qatar,
+    channelLogo: euroLogo,
+    link: "https://www.euronews.com/culture/2023/04/10/meet-the-football-team-from-pakistan-who-won-the-hearts-of-crowds-in-qatar",
+    title:
+      "Meet the football team from Pakistan who won the hearts of crowds in Qatar",
+    date: "April 10, 2023",
+    views: 325,
     comments: 0,
+    description:
+      "In Pakistan, more than 22 million children are out of school, and more than 7.5 million children are on the streets.",
   },
   {
     id: 3,
-    image: news5,
-    date: "August 5, 2021",
-    title: "INJURY WOES CONTINUE FOR STAR STRIKER AHEAD OF CRUCIAL MATCH",
-    views: 167,
+    image: isbSCWC,
+    channelLogo: isbLogo,
+    link: "https://www.islamabadscene.com/pakistan-finishes-street-child-football-world-cup-runner-up/",
+    title:
+      "Pakistan finishes Street Child Football World Cup runner up",
+    date: "October 18, 2022",
+    views: 325,
     comments: 0,
-  },
-  {
-    id: 4,
-    image: news6,
-    date: "August 5, 2021",
-    title: "INJURY WOES CONTINUE FOR STAR STRIKER AHEAD OF CRUCIAL MATCH",
-    views: 167,
-    comments: 0,
+    description:
+      "Pakistan, after putting up a valiant show throughout the tournament, finished as runner-up in the Street Child Football World Cup 2022, after losing to Egypt in the final.",
   },
 ];
 

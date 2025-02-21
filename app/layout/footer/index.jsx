@@ -2,7 +2,7 @@ import React from "react";
 import bgImage from "@/images/footer-bg.jpg";
 import bgImage2 from "@/images/footer-bg2.png";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import logo from "@/images/logo.png";
+import logo from "@/images/maidaan-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,13 +62,14 @@ const Footer = () => {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center px-6">
           {/* Logo */}
-          <Image
-            src={logo}
-            alt="Club Logo"
-            width={150}
-            height={150}
-            className="mb-10"
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="logo"
+              className="cursor-pointer w-[68px] h-[68px] hidden md:block rounded-md"
+              priority
+            />
+          </Link>
 
           {/* Description */}
           <p className="mt-3 max-w-4xl text-sm mb-10">

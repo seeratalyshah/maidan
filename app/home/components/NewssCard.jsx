@@ -6,7 +6,7 @@ const NewssCard = ({ item }) => {
   return (
     <div className="relative flex bg-white overflow-hidden p-4 items-center gap-4">
       <div className="absolute top-2 right-2 bg-white border text-sm font-bold px-1 py-1 rounded-lg">
-        <Image src={geoLogo} alt="geo-logo" className="w-4 h-4 rounded-lg" />
+        <Image src={item.channelLogo} alt="geo-logo" className="w-4 h-4 rounded-lg" />
       </div>
       {/* Image Section */}
       <div className="w-32 h-24 flex-shrink-0">

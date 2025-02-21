@@ -45,18 +45,27 @@ export default function VideoSection() {
             <div className="relative w-[90%] md:w-[60%] lg:w-[40%] bg-black p-4 rounded-lg shadow-lg">
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute top-4 right-4 bg-green-600 text-white p-2 rounded-full text-lg shadow-lg hover:bg-green-700 transition-all"
+                className="absolute -top-6 -right-6 bg-green-600 text-white p-2 rounded-full text-lg shadow-lg hover:bg-green-700 transition-all"
               >
                 <RxCross2 />
               </button>
-              <video
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/XQUEq6sKluc"// Replace with actual video URL
+                title="Youtube Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              {/* <video
                 className="w-full h-64 md:h-80 lg:h-96 rounded-lg"
                 controls
                 autoPlay
               >
                 <source src="/public/videos/training-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
             </div>
           </div>
         )}
